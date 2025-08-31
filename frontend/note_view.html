@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS/util.css">
+    <link rel="stylesheet" href="CSS/style_note.css">
+    <link rel="stylesheet" href="CSS/style_home.css">
+    <link rel="stylesheet" href="CSS/note_unit1.css">
+    <link rel="stylesheet" href="CSS/mobile.css">
+    <link rel="stylesheet" href="CSS/fixes.css">
+    <link rel="stylesheet" href="CSS/enhanced-styles.css">
+    <link rel="stylesheet" href="CSS/quick-fix.css">
+    <title>View Note - ClickNotes</title>
+</head>
+
+<body>
+    <nav class="navigation max-width-nav m-auto">
+        <div class="nav-left">
+            <span> ClickNotes</span>
+            <ul>
+                <li><a href="Notes.html">Home</a></li>
+                <li><a href="upload.html">Upload</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="about.html">About Founder</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <form action="search.html" method="get">
+                <input class="form-input" type="text" name="search" id="search" placeholder=" Notes Search">
+                <button class="btn">Search</button>
+            </form>
+        </div>
+    </nav>
+    
+    <div class="note_img max-width-1 m-auto">
+        <img src="/img/phy.jpg" alt="Notes" id="noteImage">
+    </div>
+    
+    <div class="max-width-1 m-auto"></div>
+    
+    <div class="note-content max-width-2 font1 m-auto my2">
+        <h1 id="noteTitle">Loading...</h1>
+        <div class="meta">
+            <div class="athr-info font2">
+                <b><div id="uploaderInfo">Upload by: Loading...</div></b>
+                <div id="noteDate">Loading...</div>
+            </div>
+            <div class="social">
+                <button class="social-icon like-btn" onclick="likeNote()" title="Like">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 512 512">
+                        <path d="M323.8 34.8c-38.2-10.9-78.1 11.2-89 49.4l-5.7 20c-3.7 13-10.4 25-19.5 35l-51.3 56.4c-8.9 9.8-8.2 25 1.6 33.9s25 8.2 33.9-1.6l51.3-56.4c14.1-15.5 24.4-34 30.1-54.1l5.7-20c3.6-12.7 16.9-20.1 29.7-16.5s20.1 16.9 16.5 29.7l-5.7 20c-5.7 19.9-14.7 38.7-26.6 55.5c-5.2 7.3-5.8 16.9-1.7 24.9s12.3 13 21.3 13L448 224c8.8 0 16 7.2 16 16c0 6.8-4.3 12.7-10.4 15c-7.4 2.8-13 9-14.9 16.7s.1 15.8 5.3 21.7c2.5 2.8 4 6.5 4 10.6c0 7.8-5.6 14.3-13 15.7c-8.2 1.6-15.1 7.3-18 15.2s-1.6 16.7 3.6 23.3c2.1 2.7 3.4 6.1 3.4 9.9c0 6.7-4.2 12.6-10.2 14.9c-11.5 4.5-17.7 16.9-14.4 28.8c.4 1.3 .6 2.8 .6 4.3c0 8.8-7.2 16-16 16H286.5c-12.6 0-25-3.7-35.5-10.7l-61.7-41.1c-11-7.4-25.9-4.4-33.3 6.7s-4.4 25.9 6.7 33.3l61.7 41.1c18.4 12.3 40 18.8 62.1 18.8H384c34.7 0 62.9-27.6 64-62c14.6-11.7 24-29.7 24-50c0-4.5-.5-8.8-1.3-13c15.4-11.7 25.3-30.2 25.3-51c0-6.5-1-12.8-2.8-18.7C504.8 273.7 512 257.7 512 240c0-35.3-28.6-64-64-64l-92.3 0c4.7-10.4 8.7-21.2 11.8-32.2l5.7-20c10.9-38.2-11.2-78.1-49.4-89zM32 192c-17.7 0-32 14.3-32 32V448c0 17.7 14.3 32 32 32H96c17.7 0 32-14.3 32-32V224c0-17.7-14.3-32-32-32H32z"/>
+                    </svg>
+                    <span id="likeCount">0</span>
+                </button>
+                
+                <button class="social-icon" onclick="downloadNote()" title="Download">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 512 512">
+                        <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/>
+                    </svg>
+                </button>
+                
+                <button class="social-icon" onclick="shareNote()" title="Share">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 512 512">
+                        <path d="M307 34.8c-11.5 5.1-19 16.6-19 29.2v64H176C78.8 128 0 206.8 0 304C0 417.3 81.5 467.9 100.2 478.1c2.5 1.4 5.3 1.9 8.1 1.9c10.9 0 19.7-8.9 19.7-19.7c0-7.5-4.3-14.4-9.8-19.5C108.8 431.9 96 414.4 96 384c0-53 43-96 96-96h96v64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <div class="note-info">
+            <p><strong>Subject:</strong> <span id="noteSubject">Loading...</span></p>
+            <p><strong>Class:</strong> <span id="noteClass">Loading...</span></p>
+            <p><strong>Unit:</strong> <span id="noteUnit">Loading...</span></p>
+            <p><strong>Views:</strong> <span id="noteViews">0</span></p>
+            <p><strong>Downloads:</strong> <span id="noteDownloads">0</span></p>
+        </div>
+        
+        <p id="noteDescription" class="about-content">Loading...</p>
+        
+        <div class="note-content-text">
+            <h2>Content Preview</h2>
+            <p id="noteContent">Loading...</p>
+        </div>
+    </div>
+
+    <div class="max-width-1 m-auto my2">
+        <hr>
+    </div>
+    
+    <div class="home-notes max-width-1 m-auto font1 my2">
+        <h3>People who read this also read</h3>
+        <div class="row" id="relatedNotes">
+            <!-- Related notes will be loaded here -->
+        </div>
+    </div>
+    
+    <footer class="footer max-width-1 m-auto">
+        <p>CopyRight &copy; www.ClickNotes.com | All Rights Reserved!</p>
+    </footer>
+    
+    <script>
+        const API_URL = 'http://localhost:5000/api';
+        let currentNoteId = null;
+        
+        // Get note ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const noteId = urlParams.get('id');
+        
+        // Load note details
+        async function loadNote() {
+            if (!noteId) {
+                alert('Note ID not found');
+                window.location.href = 'Notes.html';
+                return;
+            }
+            
+            currentNoteId = noteId;
+            
+            try {
+                const response = await fetch(`${API_URL}/notes/${noteId}`, {
+                    credentials: 'include'
+                });
+                
+                if (response.ok) {
+                    const note = await response.json();
+                    displayNote(note);
+                    loadRelatedNotes();
+                } else {
+                    alert('Note not found');
+                    window.location.href = 'Notes.html';
+                }
+            } catch (error) {
+                console.error('Load note error:', error);
+                alert('Failed to load note');
+            }
+        }
+        
+        // Display note details
+        function displayNote(note) {
+            document.getElementById('noteTitle').textContent = note.title;
+            document.getElementById('uploaderInfo').textContent = `Upload by: ${note.uploadedBy.firstName} ${note.uploadedBy.lastName}`;
+            document.getElementById('noteDate').textContent = `${formatDate(note.createdAt)} | ${note.readingTime}`;
+            document.getElementById('noteSubject').textContent = note.subject;
+            document.getElementById('noteClass').textContent = note.class;
+            document.getElementById('noteUnit').textContent = note.unit;
+            document.getElementById('noteViews').textContent = note.views;
+            document.getElementById('noteDownloads').textContent = note.downloadCount;
+            document.getElementById('likeCount').textContent = note.likes.length;
+            document.getElementById('noteDescription').textContent = note.description;
+            document.getElementById('noteContent').textContent = note.content;
+            
+            // Update page title
+            document.title = `${note.title} - ClickNotes`;
+            
+            // Update thumbnail if available
+            if (note.thumbnailUrl) {
+                document.getElementById('noteImage').src = note.thumbnailUrl;
+            }
+        }
+        
+        // Format date
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const options = { day: '2-digit', month: 'long' };
+            return date.toLocaleDateString('en-US', options);
+        }
+        
+        // Load related notes
+        async function loadRelatedNotes() {
+            try {
+                const response = await fetch(`${API_URL}/notes/${noteId}/related`, {
+                    credentials: 'include'
+                });
+                
+                if (response.ok) {
+                    const notes = await response.json();
+                    displayRelatedNotes(notes);
+                }
+            } catch (error) {
+                console.error('Load related notes error:', error);
+            }
+        }
+        
+        // Display related notes
+        function displayRelatedNotes(notes) {
+            const container = document.getElementById('relatedNotes');
+            
+            const notesHTML = notes.map(note => `
+                <div class="home-note max-width-1 m-auto more-note">
+                    <div class="home-note-img">
+                        <img src="${note.thumbnailUrl || '/img/default-note.jpg'}" alt="${note.title}">
+                    </div>
+                    <div class="home-note-content">
+                        <a href="note_view.html?id=${note._id}">
+                            <h3>${note.title}</h3>
+                        </a>
+                        <span>${note.subject} |</span>
+                        <span>${formatDate(note.createdAt)} | ${note.readingTime}</span>
+                    </div>
+                </div>
+            `).join('');
+            
+            container.innerHTML = notesHTML;
+        }
+        
+        // Like note
+        async function likeNote() {
+            const user = await checkAuth();
+            if (!user) {
+                alert('Please login to like notes');
+                window.location.href = 'Notes.html';
+                return;
+            }
+            
+            try {
+                const response = await fetch(`${API_URL}/notes/${currentNoteId}/like`, {
+                    method: 'POST',
+                    credentials: 'include'
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    document.getElementById('likeCount').textContent = data.likesCount;
+                    const likeBtn = document.querySelector('.like-btn');
+                    likeBtn.classList.toggle('liked', data.liked);
+                }
+            } catch (error) {
+                console.error('Like error:', error);
+            }
+        }
+        
+        // Download note
+        async function downloadNote() {
+            const user = await checkAuth();
+            if (!user) {
+                alert('Please login to download notes');
+                window.location.href = 'Notes.html';
+                return;
+            }
+            
+            window.location.href = `${API_URL}/notes/${currentNoteId}/download`;
+        }
+        
+        // Share note
+        function shareNote() {
+            const url = window.location.href;
+            if (navigator.share) {
+                navigator.share({
+                    title: document.getElementById('noteTitle').textContent,
+                    url: url
+                });
+            } else {
+                // Copy to clipboard
+                navigator.clipboard.writeText(url);
+                alert('Link copied to clipboard!');
+            }
+        }
+        
+        // Check authentication
+        async function checkAuth() {
+            try {
+                const response = await fetch(`${API_URL}/auth/me`, {
+                    credentials: 'include'
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    return data.user;
+                }
+                return null;
+            } catch (error) {
+                console.error('Auth check error:', error);
+                return null;
+            }
+        }
+        
+        // Load note on page load
+        loadNote();
+    </script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

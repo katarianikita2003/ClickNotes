@@ -1,0 +1,357 @@
+/* About Page Specific Styles */
+
+/* About Section */
+.about {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 3rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 3rem auto;
+}
+
+/* Founder Image */
+.about img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.about img:hover {
+    transform: scale(1.05);
+}
+
+/* About Page Banner */
+.about-banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/img/bg4.png");
+  padding: 3rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-banner::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 165, 0, 0.1);
+  border-radius: 50%;
+}
+
+.about-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.about-profile img {
+  top: 25px;
+  right: 425px;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #4a90e2;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.about-info h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.about-info p {
+  color: #666;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.role-badge {
+  display: inline-block;
+  background: #ffa500;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* About Content Section */
+.about-main {
+  background: rgba(230, 230, 250, 0.3);
+  padding: 3rem;
+  border-radius: 15px;
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.about-main h2 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.about-main h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: #4a90e2;
+}
+
+
+/* Profile Information */
+.profile {
+    flex: 1;
+}
+
+.profile h2 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.profile p {
+    font-size: 1.2rem;
+    color: var(--gray-dark);
+    font-style: italic;
+}
+
+/* About Content Section */
+.note-content {
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.note-content h1 {
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Social Icons Enhancement */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-links a:hover svg {
+  fill: white;
+}
+
+.social-links a:nth-child(1):hover {
+  background: #0077b5;
+}
+.social-links a:nth-child(2):hover {
+  background: #333;
+}
+.social-links a:nth-child(3):hover {
+  background: #0088cc;
+}
+.social-links a:nth-child(4):hover {
+  background: #1da1f2;
+}
+/* 
+/* Social Icons in About Page */
+.meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.social svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--gray-dark);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 0.5rem;
+}
+
+.social svg:hover {
+    fill: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* LinkedIn Icon */
+.social svg:nth-child(1):hover {
+    fill: #0077b5;
+}
+
+/* GitHub Icon */
+.social svg:nth-child(2):hover {
+    fill: #333;
+}
+
+/* Telegram Icon */
+.social svg:nth-child(3):hover {
+    fill: #0088cc;
+}
+
+/* Twitter Icon */
+.social svg:nth-child(4):hover {
+    fill: #1da1f2;
+} */
+
+/* About Content Text */
+.about-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    color: var(--text-color);
+}
+
+/* Achievements Section (Optional Enhancement) */
+.achievements {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+    padding: 2rem;
+    background-color: var(--gray-light);
+    border-radius: 8px;
+}
+
+.achievement-card {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-card h3 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.achievement-card p {
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+/* Mission Statement */
+.mission {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 3rem;
+    border-radius: 8px;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.mission h2 {
+    color: var(--white);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.mission p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contact Information */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-color);
+}
+
+.contact-item svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+    
+    .about img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .profile h2 {
+        font-size: 1.5rem;
+    }
+    
+    .social {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    
+    .meta {
+        flex-direction: column;
+    }
+}

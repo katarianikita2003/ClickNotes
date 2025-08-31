@@ -1,0 +1,255 @@
+/* Note Page Specific Styles */
+
+/* Note Image Header */
+.note_img {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.note_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Note Content */
+.note-content {
+    justify-self: center;
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+}
+
+.note-content h1 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    line-height: 1.3;
+}
+
+/* Meta Information */
+.meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--gray-light);
+    margin-bottom: 2rem;
+}
+
+.athr-info {
+    color: var(--gray-dark);
+}
+
+.athr-info div:first-child {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.athr-info div:last-child {
+    font-size: 0.9rem;
+}
+
+/* Social Icons */
+.social {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.social-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--gray-dark);
+    transition: fill 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--gray-light);
+}
+
+.social-icon:hover svg {
+    fill: var(--primary-color);
+}
+
+.like-btn.liked svg {
+    fill: var(--accent-color);
+}
+
+/* Note Info Section */
+.note-info {
+    background-color: var(--gray-light);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.note-info p {
+    margin: 0;
+    color: var(--text-color);
+}
+
+.note-info strong {
+    color: var(--secondary-color);
+}
+
+/* About Content */
+.about-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    text-align: justify;
+    margin: 2rem 0;
+}
+
+/* Note Content Text */
+.note-content-text {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.note-content-text h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.note-content-text p {
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+
+/* Related Notes Section */
+.row {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.more-note {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.more-note:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.more-note .home-note-img {
+    height: 200px;
+}
+
+.more-note .home-note-content {
+    padding: 1.5rem;
+}
+
+.more-note h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Download Button Style */
+.download-btn {
+    background-color: var(--success);
+    color: var(--white);
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+}
+
+.download-btn:hover {
+    background-color: #219a52;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* Tags */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tag {
+    background-color: var(--gray-light);
+    color: var(--text-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Comments Section (Future Enhancement) */
+.comments-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--gray-light);
+}
+
+.comments-section h3 {
+    margin-bottom: 1.5rem;
+}
+
+.comment {
+    background-color: var(--gray-light);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.comment-author {
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.comment-date {
+    font-size: 0.8rem;
+    color: var(--gray-dark);
+}
+
+.comment-text {
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}

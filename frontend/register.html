@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/util.css">
+    <link rel="stylesheet" href="CSS/style_register.css">
+    <link rel="stylesheet" href="CSS/style_home.css">
+    <link rel="stylesheet" href="CSS/mobile.css">
+    <link rel="stylesheet" href="CSS/fixes.css">
+    <link rel="stylesheet" href="CSS/enhanced-styles.css">
+    <link rel="stylesheet" href="CSS/quick-fix.css">
+    <title>Register - ClickNotes</title>
+</head>
+
+<body>
+    <nav class="navigation max-width-nav m-auto">
+        <div class="nav-left">
+            <span> ClickNotes</span>
+            <ul>
+                <li><a href="Notes.html">Home</a></li>
+                <li><a href="upload.html">Upload</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="about.html">About Founder</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <form action="search.html" method="get">
+                <input class="form-input" type="text" name="search" id="search" placeholder=" Notes Search">
+                <button class="btn">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="sub max-width-2 m-auto">
+        <h2>To Register</h2>
+        <form class="form" id="registerForm">
+            <div class="name">
+                Name: <input class="form-input" type="text" placeholder="First Name" required> 
+                <input class="form-input" type="text" placeholder="Last Name" required>
+            </div>
+            <div class="dob">
+                DOB: <input class="form-input" type="date" placeholder="Enter Your DOB" required>
+            </div>
+            <div class="class">
+                Qualification: <input class="form-input" type="text" placeholder="Enter Your Qualification" required>
+            </div>
+            <div class="num">
+                Mobile No.: <input class="form-input" type="phone" placeholder="Enter Your Mobile Number" required> 
+                <button class="ver" type="button" onclick="alert('OTP: 123456')">Get OTP</button> 
+                <input class="form-input" type="password" placeholder="Enter OTP"> 
+                <button class="ver" type="button" onclick="alert('Mobile Verified!')">Verify</button>
+            </div>
+            <div class="mail">
+                E-Mail: <input class="form-input" type="email" placeholder="Enter Your E-Mail" required> 
+                <button class="ver" type="button" onclick="alert('OTP: 654321')">Get OTP</button> 
+                <input class="form-input" type="password" placeholder="Enter OTP"> 
+                <button class="ver" type="button" onclick="alert('Email Verified!')">Verify</button>
+            </div>
+            <div class="cap">
+                Captcha: <input class="form-input" type="text" placeholder="Enter Captcha (type: easy)" required> 
+                <button class="ver" type="button" onclick="alert('Captcha Verified!')">Verify</button>
+            </div>
+            <button class="ver" type="submit">Submit</button>
+        </form>
+    </div>
+    <footer class="footer max-width-1 m-auto">
+        <p>CopyRight &copy; www.ClickNotes.com | All Rights Reserved!</p>
+    </footer>
+    
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

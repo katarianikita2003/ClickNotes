@@ -1,0 +1,278 @@
+/* Registration and Form Page Styles */
+
+/* Form Container */
+.sub {
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 3rem auto;
+}
+
+.sub h2 {
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Form Layout */
+.form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form > div {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form > div:last-child {
+    margin-top: 2rem;
+}
+
+/* Form Groups */
+.name,
+.num,
+.mail {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.name {
+    grid-template-columns: auto 1fr 1fr;
+}
+
+.num,
+.mail {
+    grid-template-columns: auto 1fr auto 1fr auto;
+}
+
+.dob,
+.class,
+.cap {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cap {
+    grid-template-columns: auto 1fr auto;
+}
+
+/* Form Labels */
+.form > div > *:first-child {
+    font-weight: bold;
+    color: var(--secondary-color);
+    min-width: 120px;
+}
+
+/* Form Inputs */
+.form .form-input {
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form .form-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.form .form-input:invalid {
+    border-color: var(--error);
+}
+
+.form .form-input:valid {
+    border-color: var(--success);
+}
+
+/* Verification Buttons */
+.ver {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.ver:hover {
+    background-color: #357abd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ver:active {
+    transform: translateY(0);
+}
+
+/* Submit Button */
+.form > button.ver {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: var(--success);
+    margin-top: 2rem;
+}
+
+.form > button.ver:hover {
+    background-color: #219a52;
+}
+
+/* Success Messages */
+.verification-success {
+    color: var(--success);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Error Messages */
+.form-error {
+    color: var(--error);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* OTP Input */
+input[placeholder*="OTP"] {
+    max-width: 120px;
+    text-align: center;
+    letter-spacing: 0.5rem;
+    font-weight: bold;
+}
+
+/* Date Input Styling */
+input[type="date"] {
+    cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(0.5);
+}
+
+/* Phone Input */
+input[type="phone"],
+input[type="tel"] {
+    letter-spacing: 0.1rem;
+}
+
+/* Email Input */
+input[type="email"] {
+    text-transform: lowercase;
+}
+
+/* Captcha Section */
+.cap input[type="tel"] {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+}
+
+/* Form Animation */
+.form > div {
+    opacity: 0;
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+.form > div:nth-child(1) { animation-delay: 0.1s; }
+.form > div:nth-child(2) { animation-delay: 0.2s; }
+.form > div:nth-child(3) { animation-delay: 0.3s; }
+.form > div:nth-child(4) { animation-delay: 0.4s; }
+.form > div:nth-child(5) { animation-delay: 0.5s; }
+.form > div:nth-child(6) { animation-delay: 0.6s; }
+.form > div:nth-child(7) { animation-delay: 0.7s; }
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Verified State */
+.verified {
+    position: relative;
+}
+
+.verified::after {
+    content: "✓";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--success);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Loading State for Buttons */
+.ver.loading {
+    position: relative;
+    color: transparent;
+}
+
+.ver.loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spinner 0.8s linear infinite;
+}
+
+@keyframes spinner {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive Form */
+@media (max-width: 768px) {
+    .sub {
+        padding: 2rem 1.5rem;
+    }
+    
+    .form > div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .form > div > *:first-child {
+        min-width: auto;
+    }
+    
+    .name,
+    .num,
+    .mail,
+    .cap {
+        grid-template-columns: 1fr;
+    }
+    
+    .ver {
+        width: 100%;
+    }
+}

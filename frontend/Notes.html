@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/util.css">
+    <link rel="stylesheet" href="CSS/style_home.css">
+    <link rel="stylesheet" href="CSS/mobile.css">
+    <link rel="stylesheet" href="CSS/fixes.css">
+    <link rel="stylesheet" href="CSS/enhanced-styles.css">
+    <link rel="stylesheet" href="CSS/quick-fix.css">
+    <title>A Premium Store for every kind of study material | https://www.ClickNotes.com</title>
+</head>
+
+<body>
+    <nav class="navigation max-width-nav m-auto">
+        <div class="nav-left">
+            <span>ClickNotes</span>
+            <ul>
+                <li><a href="Notes.html">Home</a></li>
+                <li><a href="upload.html">Upload</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="about.html">About Founder</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <form action="search.html" method="get">
+                <input class="form-input" type="text" name="search" id="search" placeholder="Notes Search">
+                <button class="btn">Search</button>
+            </form>
+        </div>
+    </nav>
+    
+    <section class="hero-section">
+        <div class="hero-content max-width-1 m-auto">
+            <div class="hero-text">
+                <h1>Welcome to ClickNotes !</h1>
+                <p>Your ultimate destination for easy access to study materials and notes across various courses. Our
+                    platform is designed to promote knowledge sharing, where students from all backgrounds can contribute
+                    and benefit from each other's insights. We believe that education becomes more meaningful when it's a
+                    collaborative effort. Whether you are looking for notes in science, humanities, engineering, or any
+                    other subject, Click Notes has got you covered. Join our community today, share your notes, and
+                    together, let's make learning an enjoyable and empowering experience for everyone. Click, share, and
+                    learn with Click Notes!</p>
+            </div>
+            <div class="login-box">
+                <h1>LOGIN</h1>
+                <input type="text" name="username" placeholder="Username">
+                <input type="password" name="pass" placeholder="Password">
+                <input type="text" name="captcha" placeholder="Enter Captcha (type: easy)">
+                <button class="submit">Submit</button>
+                <h3>Don't have an account, Register Now</h3>
+                <a href="register.html" class="register">Register</a>
+            </div>
+        </div>
+    </section>
+    
+    <div class="max-width-1 m-auto my2">
+        <hr>
+    </div>
+    
+    <div class="home-notes max-width-1 m-auto font1 my2">
+        <h3>Latest Uploads</h3>
+        <!-- Notes will be loaded dynamically -->
+        <div class="note-card">
+            <div class="note-card-img">
+                <img src="img/unit1.jpg" alt="notes">
+            </div>
+            <div class="note-card-content">
+                <a href="note_unit1.html">
+                    <h3>UNIT 1: Physical World and Measurement</h3>
+                </a>
+                <div class="meta">
+                    <span>Physics</span>
+                    <span>07 January | 1hr 50min</span>
+                </div>
+            </div>
+        </div>
+        <div class="note-card">
+            <div class="note-card-img">
+                <img src="img/unit2.jpg" alt="notes">
+            </div>
+            <div class="note-card-content">
+                <a href="note_unit1.html">
+                    <h3>UNIT 2: Kinematics</h3>
+                </a>
+                <div class="meta">
+                    <span>Physics</span>
+                    <span>14 January | 5hr 20min</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer max-width-1 m-auto">
+        <p>CopyRight © www.ClickNotes.com | All Rights Reserved!</p>
+    </footer>
+    
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
